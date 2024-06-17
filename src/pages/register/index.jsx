@@ -21,7 +21,7 @@ const RegisterForm = () => {
       return;
     }    
     setError(""); 
-    axios.post("http://localhost:5000/users/", {
+    axios.post("https://cookbook-b.onrender.com/users/", {
       email,
       password,
       firstName,

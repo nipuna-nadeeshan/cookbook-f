@@ -12,7 +12,7 @@ const LoginPage = () => {
   const handleLogin = (event) => {
     event.preventDefault();
 
-    axios.post("http://localhost:5000/users/login", {
+    axios.post("https://cookbook-b.onrender.com/users/login", {
       email,
       password,
     }).then((response) => {

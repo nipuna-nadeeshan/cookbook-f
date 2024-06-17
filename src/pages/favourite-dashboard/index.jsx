@@ -8,7 +8,7 @@ export default function FavouriteDashboard() {
   useEffect(() => {
     if (!mealListLoaded) {
       axios
-        .get("http://localhost:5000/likes", {
+        .get("https://cookbook-b.onrender.com/likes", {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
