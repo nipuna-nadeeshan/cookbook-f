@@ -11,7 +11,7 @@ const RecipeCard = ({ category, id, refresh }) => {
   const addLike = () => {
     axios
       .post(
-        "http://localhost:5000/likes",
+        "https://cookbook-b.onrender.com/likes",
         {
           recipeId: id,
         },
@@ -27,7 +27,7 @@ const RecipeCard = ({ category, id, refresh }) => {
   };
   const dislike = () => {
     axios
-      .delete(`http://localhost:5000/likes/${id}`, {
+      .delete(`https://cookbook-b.onrender.com/likes/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
@@ -49,7 +49,7 @@ const RecipeCard = ({ category, id, refresh }) => {
     }
 
     axios
-      .get(`http://localhost:5000/likes/isLiked/${id}`, {
+      .get(`https://cookbook-b.onrender.com/likes/isLiked/${id}`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
